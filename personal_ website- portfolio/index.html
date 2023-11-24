@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gopika R- Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        h2, p {
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>GOPIKA R</h1>
+    </header>
+
+    <video autoplay muted loop>
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+
+    <section>
+        <img src="image.jpg" alt="Gopika R's Photo">
+        <h2>Bio</h2>
+        <p>I am a B.Tech Electronics and Computer Engineering Student, who's very much interested in the world of front-end developing.</p>
+
+        <h2>Education</h2>
+        <p>NIRMALA BHAVAN HIGHER SECONDARY SCHOOL</p>
+        <p>LBS INSTITUTE OF TECHNOLOGY FOR WOMEN 2022-2026</p>
+
+        <h2>Skills</h2>
+        <p>Web-Design</p>
+
+        <h2>Socials</h2>
+        <ul>
+            <li><a href=https://www.instagram.com/gopikaaa._/"target="_blank">Instagram</a></li>
+            <li><a href="http://www.linkedin.com/in/gopika-r" target="_blank">LinkedIn</a></li>
+            <li><a href="https://twitter.com/gopika_r_" target="_blank">Twitter</a></li>
+        </ul><br><br>
+
+        <h2>Leadership Experiences</h2>
+        <p>Did Intership at insght for innovation as a teacher</p>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 100) {
+                    document.body.style.opacity = 1;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

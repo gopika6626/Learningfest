@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    form {
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+    }
+
+    input {
+      width: 200px;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #error-message {
+      color: #e74c3c;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <form id="myForm" onsubmit="validateForm(); return false;">
+    <h2>Form Validation</h2>
+    <input type="text" id="username" placeholder="Username">
+    <br>
+    <input type="email" id="email" placeholder="Email">
+    <br>
+    <button type="submit">Submit</button>
+    <p id="error-message"></p>
+  </form>
+
+  <script>
+    function validateForm()
+    {
+      var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
+      var errorMessage = document.getElementById('error-message');
+
+      if (username.trim() === '' || email.trim() === '')
+      {
+        errorMessage.textContent = 'Both fields are required.';
+      }
+      else
+      {
+        errorMessage.textContent = '';
+        alert('Form submitted successfully!');
+      }
+    }
+  </script>
+</body>
+</html>

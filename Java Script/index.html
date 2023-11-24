@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="Mulearn.png">
+  <title>Random Dice Roller</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    #dice-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #dice-label {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #3498db;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    #dice {
+      font-size: 4em;
+      cursor: pointer;
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      color: #ffffff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+      margin-bottom: 10px;
+    }
+
+    #dice:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div id="dice-container">
+    <div id="dice-label">Roll the Dice</div>
+    <div id="dice" onclick="rollDice()">1</div>
+  </div>
+
+  <script>
+    function rollDice() {
+      var randomNumber = Math.floor(Math.random() * 6) + 1;
+      document.getElementById('dice').innerText = randomNumber;
+    }
+  </script>
+</body>
+</html>
